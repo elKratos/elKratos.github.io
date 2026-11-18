@@ -3,17 +3,17 @@
         {
             "name": "Alice",
             "visible": false,
-            "role": "Guerrera demoníaca",
-            "image": "src/images/Alice.png",
-            "description": "Combatiente de piel rojiza, cuernos y cola, equipada con armadura oscura y una daga.",
+            "role": "Picara",
+            "image": "src/images/webp/Alice.webp",
+            "description": "Hermanastra de Hal-Ber, trabaja con los mercenarios Ala roja y es experta en el robo y la infiltración. Su padre es el lider de los mercenarios Ala roja.",
             "relation": "No especificada",
             "location": "No especificada"
         },
         {
             "name": "Asesina",
             "visible": true,
-            "role": "Asesina",
-            "image": "src/images/Asesina.png",
+            "role": "Picara",
+            "image": "src/images/webp/Asesina.webp",
             "description": "Figura encapuchada de aspecto demoníaco, armada con una daga y vestida para moverse sin ser reconocida.",
             "relation": "No especificada",
             "location": "No especificada"
@@ -22,7 +22,7 @@
             "name": "Blepp",
             "visible": true,
             "role": "Pícaro goblin",
-            "image": "src/images/Blepp.png",
+            "image": "src/images/webp/Blepp.webp",
             "description": "Pequeño ser reptiliano de escamas rojizas, con colmillos, un cuchillo y equipo de viaje.",
             "relation": "No especificada",
             "location": "No especificada"
@@ -31,7 +31,7 @@
             "name": "Firulai",
             "visible": true,
             "role": "Explorador alado",
-            "image": "src/images/Firulai.png",
+            "image": "src/images/webp/Firulai.webp",
             "description": "Personaje de orejas puntiagudas con alas claras, ropa de viaje y una daga.",
             "relation": "No especificada",
             "location": "No especificada"
@@ -40,7 +40,7 @@
             "name": "Hal-Ber",
             "visible": true,
             "role": "Monje guerrero",
-            "image": "src/images/Hal-Ber.png",
+            "image": "src/images/webp/Hal-Ber.webp",
             "description": "Luchador de cuernos y cola, vestido con ropas de entrenamiento y en posición de combate.",
             "relation": "No especificada",
             "location": "No especificada"
@@ -49,7 +49,7 @@
             "name": "Jhank",
             "visible": true,
             "role": "Guerrero",
-            "image": "src/images/Jhank.png",
+            "image": "src/images/webp/Jhank.webp",
             "description": "Combatiente corpulento con armadura de cuero y malla, capa roja y una gran espada.",
             "relation": "No especificada",
             "location": "No especificada"
@@ -58,7 +58,7 @@
             "name": "Juan",
             "visible": true,
             "role": "Bardo",
-            "image": "src/images/Juan.png",
+            "image": "src/images/webp/Juan.webp",
             "description": "Elfo de piel oscura y cabello plateado que lleva un arpa y ropa de viajero.",
             "relation": "No especificada",
             "location": "No especificada"
@@ -67,7 +67,7 @@
             "name": "Khael",
             "visible": true,
             "role": "Caballero enano",
-            "image": "src/images/Khael.png",
+            "image": "src/images/webp/Khael.webp",
             "description": "Enano de barba roja con armadura dorada, espada y escudo.",
             "relation": "No especificada",
             "location": "No especificada"
@@ -76,7 +76,7 @@
             "name": "Morvath",
             "visible": true,
             "role": "Hechicero dragón",
-            "image": "src/images/Morvath.png",
+            "image": "src/images/webp/Morvath.webp",
             "description": "Ser dracónico de escamas doradas, vestido con ropas oscuras y portando un bastón con una gema.",
             "relation": "No especificada",
             "location": "No especificada"
@@ -85,7 +85,7 @@
             "name": "Norak",
             "visible": true,
             "role": "Guerrero orco",
-            "image": "src/images/Norak.png",
+            "image": "src/images/webp/Norak.webp",
             "description": "Orco de gran tamaño, armado con un hacha y vestido con equipo de cuero y pieles.",
             "relation": "No especificada",
             "location": "No especificada"
@@ -94,7 +94,7 @@
             "name": "Tarak",
             "visible": true,
             "role": "Alquimista y herbolario",
-            "image": "src/images/Tarak.png",
+            "image": "src/images/webp/Tarak.webp",
             "description": "Hombre de barba canosa con delantal, frascos de pociones y un cuenco de preparación.",
             "relation": "No especificada",
             "location": "No especificada"
