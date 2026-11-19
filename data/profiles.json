@@ -67,7 +67,7 @@
             "name": "Agga",
             "visible": true,
             "role": "Kobold habitante",
-            "image": "src/images/webp/Blepp.webp",
+            "image": "src/images/webp/Agga.webp",
             "description": "Mantiene al resto de kobolds organizados y bajo control. Se encarga de cocinar para todos los habitantes del Retiro del Dragón.",
             "relation": "Neutral/Amistoso",
             "location": "Retiro del Dragón"
@@ -85,7 +85,7 @@
             "name": "Laylee",
             "visible": true,
             "role": "Kobold bibliotecaria",
-            "image": "src/images/webp/Blepp.webp",
+            "image": "src/images/webp/Laylee.webp",
             "description": "Es la aprendiz de Myla y una ratón de biblioteca. Es muy curiosa y proactiva, siempre buscando aprender cosas nuevas y ayudar a los demás.",
             "relation": "Amistoso",
             "location": "Retiro del Dragón"
@@ -103,7 +103,7 @@
             "name": "Rix",
             "visible": true,
             "role": "Kobold habitante",
-            "image": "src/images/webp/Blepp.webp",
+            "image": "src/images/webp/Rix.webp",
             "description": "Cuida del templo en calidad de ayudante de Runara. Es un poco timida, pero muy amable y servicial. Siempre esta dispuesta a ayudar a los aventureros que visitan el Retiro del Dragón.",
             "relation": "Amistoso",
             "location": "Retiro del Dragón"
