@@ -1,22 +1,53 @@
 {
     "missions": [
         {
-            "name": "La pista de la asesina",
-            "visible": true,
-            "completed": false,
-            "description": "Investiga el ataque contra Noral y descubre quién es la figura encapuchada."
-        },
-        {
-            "name": "Los mercenarios del Ala Roja",
-            "visible": true,
-            "completed": false,
-            "description": "Sigue el rastro de los mercenarios y averigua qué relación tienen con la asesina."
-        },
-        {
-            "name": "El encargo de Tarak",
+            "name": "Cuevas marinas",
             "visible": true,
             "completed": true,
-            "description": "Reúne los ingredientes que necesita Tarak para preparar una poción."
+            "provided": "Tarak",
+            "description": "Investiga las cuevas de Pleamar y averigua porque se han aislado los habitantes de la zona y no quieren hablar con nadie."
+        },
+        {
+            "name": "El Rosa de los vientos",
+            "visible": true,
+            "completed": true,
+            "provided": "Runara o Rix",
+            "description": "Investiga la zona donde se encuentra el Rosa de los vientos y averigua porque se estan hundidiendo los barcos en la zona."
+        },
+        {
+            "name": "La reunión con Runara",
+            "visible": true,
+            "completed": false,
+            "provided": "Runara",
+            "description": "Reunios con Runara en el tempo a la media noche y averigua que es lo que quiere de vosotros."
+        },
+        {
+            "name": "El Observatorio",
+            "visible": false,
+            "completed": false,
+            "provided": "Runara",
+            "description": "Investiga el observatorio y rescata al joven dragón de Bronce que ha sido capturado."
+        },
+        {
+            "name": "La Prision de la Bestia",
+            "visible": false,
+            "completed": false,
+            "provided": "Abuelo de Norak",
+            "description": "Ayuda al abuelo de Norak a derrotar a la bestia aprisionada en la Prision de Lerna."
+        },
+        {
+            "name": "Derrota al jefe de los bandidos",
+            "visible": false,
+            "completed": false,
+            "provided": "Alicia",
+            "description": "Derrota al jefe de los bandidos."
+        },
+        {
+            "name": "Impide que se complete el ritual",
+            "visible": false,
+            "completed": false,
+            "provided": "Alicia",
+            "description": "Impide que se complete el ritual de resurrección de Sharruth y derrota a Morvath."
         }
     ]
 }

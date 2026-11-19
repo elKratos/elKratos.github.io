@@ -29,13 +29,13 @@
 
         function createMissionCard(mission) {
             const card = document.createElement('article');
-            card.className = 'card mission-card';
+            card.className = `card mission-card ${mission.completed ? 'is-completed' : 'is-pending'}`;
 
             const header = document.createElement('header');
             header.className = 'mission-header';
 
             const title = document.createElement('h2');
-            title.className = 'name';
+            title.className = 'mission-title';
             title.textContent = mission.name;
 
             const status = document.createElement('span');
@@ -44,10 +44,22 @@
             header.append(title, status);
 
             const description = document.createElement('p');
-            description.className = 'description';
+            description.className = 'mission-description';
             description.textContent = mission.description;
 
-            card.append(header, description);
+            const footer = document.createElement('footer');
+            footer.className = 'mission-footer';
+
+            const providerLabel = document.createElement('span');
+            providerLabel.className = 'mission-provider-label';
+            providerLabel.textContent = 'Encargo de';
+
+            const provider = document.createElement('span');
+            provider.className = 'mission-provider';
+            provider.textContent = mission.provided;
+            footer.append(providerLabel, provider);
+
+            card.append(header, description, footer);
             return card;
         }
 
@@ -61,6 +73,9 @@
                 const data = await response.json();
                 if (!Array.isArray(data.missions)) {
                     throw new Error('El archivo data/misions.json no contiene una lista de misiones válida.');
+                }
+                if (data.missions.some(mission => typeof mission.provided !== 'string' || !mission.provided.trim())) {
+                    throw new Error('Cada misión debe incluir quién la encarga en el campo "provided".');
                 }
 
                 const visibleMissions = data.missions.filter(mission => mission.visible === true);
