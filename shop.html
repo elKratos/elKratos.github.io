@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="shop-page">
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Navegación principal">
+            <a href="profiles.html">Personajes</a>
+            <a href="misions.html">Misiones</a>
+            <a href="#shop" aria-current="page">Tienda</a>
+        </nav>
+    </header>
+
+    <h1>Tienda</h1>
+
+    <main class="shop-layout" id="shop">
+        <!-- El vendedor da la bienvenida desde su propio panel. -->
+        <aside class="shopkeeper-panel" aria-label="Vendedor">
+            <p class="speech-bubble">Bienvenido, ¿en qué le puedo ayudar?</p>
+            <div class="shopkeeper-portrait">
+                <img src="src/images/shopkeeper.png" alt="Tarak, el vendedor">
+                <h2 class="shopkeeper-name">Tarak</h2>
+            </div>
+        </aside>
+
+        <section class="shop-inventory" aria-label="Productos en venta">
+            <p id="message" role="status" aria-live="polite">Cargando productos...</p>
+            <div class="product-list" id="products"></div>
+        </section>
+    </main>
+
+    <!-- Lee data/products.json y genera una tarjeta por producto. -->
+    <script>
+        const container = document.getElementById('products');
+        const message = document.getElementById('message');
+        const currencyClasses = {
+            oro: 'coin-gold',
+            plata: 'coin-silver',
+            bronce: 'coin-bronze',
+            gp: 'coin-gold',
+            sp: 'coin-silver',
+            cp: 'coin-copper'
+        };
+
+        function createProductCard(product) {
+            const currencyClass = currencyClasses[product.currency];
+            if (!currencyClass) {
+                throw new Error(`Tipo de moneda no válido: ${product.currency}`);
+            }
+
+            const card = document.createElement('article');
+            card.className = 'product-card';
+
+            const details = document.createElement('div');
+            details.className = 'product-details';
+
+            const name = document.createElement('h3');
+            name.className = 'product-name';
+            name.textContent = product.name;
+
+            const description = document.createElement('p');
+            description.className = 'product-description';
+            description.textContent = product.description;
+
+            const meta = document.createElement('div');
+            meta.className = 'product-meta';
+
+            const units = document.createElement('p');
+            units.className = 'product-stock';
+            units.textContent = `Unidades disponibles: ${product.units}`;
+            details.append(name, description);
+
+            const price = document.createElement('p');
+            price.className = `product-price ${currencyClass}`;
+            price.textContent = `${product.price} ${product.currency}`;
+            price.setAttribute('aria-label', `Precio: ${product.price} ${product.currency}`);
+
+            meta.append(units, price);
+            card.append(details, meta);
+            return card;
+        }
+
+        function createCategory(name, products) {
+            const category = document.createElement('details');
+            category.className = 'product-category';
+
+            const summary = document.createElement('summary');
+            summary.className = 'category-title';
+
+            const heading = document.createElement('h2');
+            heading.className = 'category-name';
+            heading.textContent = name;
+
+            const count = document.createElement('span');
+            count.className = 'category-count';
+            count.textContent = `${products.length} productos`;
+            summary.append(heading, count);
+
+            const grid = document.createElement('div');
+            grid.className = 'category-products';
+            grid.append(...products.map(createProductCard));
+
+            category.append(summary, grid);
+            return category;
+        }
+
+        async function loadProducts() {
+            try {
+                const response = await fetch('data/products.json');
+                if (!response.ok) {
+                    throw new Error(`Error HTTP ${response.status}`);
+                }
+
+                const data = await response.json();
+                if (!Array.isArray(data.products)) {
+                    throw new Error('El archivo data/products.json no contiene una lista de productos válida.');
+                }
+
+                const categories = data.products.map(category => {
+                    const entries = Object.entries(category);
+                    if (entries.length !== 1 || !Array.isArray(entries[0][1])) {
+                        throw new Error('Cada categoría debe contener una lista de productos.');
+                    }
+
+                    return createCategory(entries[0][0], entries[0][1]);
+                });
+                container.replaceChildren(...categories);
+                message.textContent = data.products.length ? '' : 'No hay productos disponibles.';
+            } catch (error) {
+                message.textContent = `No se pudieron cargar los productos: ${error.message}`;
+            }
+        }
+
+        loadProducts();
+    </script>
+</body>
+
+</html>

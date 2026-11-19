@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Misiones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Navegación principal">
+            <a href="profiles.html">Personajes</a>
+            <a href="#missions" aria-current="page">Misiones</a>
+            <a href="shop.html">Tienda</a>
+        </nav>
+    </header>
+
+    <h1>Misiones</h1>
+    <!-- El estado de carga y las misiones visibles se actualizan desde JavaScript. -->
+    <p id="message" role="status" aria-live="polite">Cargando misiones...</p>
+    <main class="index mission-list" id="missions"></main>
+
+    <!-- Lee data/misions.json y muestra las misiones marcadas como visibles. -->
+    <script>
+        const container = document.getElementById('missions');
+        const message = document.getElementById('message');
+
+        function createMissionCard(mission) {
+            const card = document.createElement('article');
+            card.className = 'card mission-card';
+
+            const header = document.createElement('header');
+            header.className = 'mission-header';
+
+            const title = document.createElement('h2');
+            title.className = 'name';
+            title.textContent = mission.name;
+
+            const status = document.createElement('span');
+            status.className = `mission-status ${mission.completed ? 'is-completed' : 'is-pending'}`;
+            status.textContent = mission.completed ? 'Completada' : 'Pendiente';
+            header.append(title, status);
+
+            const description = document.createElement('p');
+            description.className = 'description';
+            description.textContent = mission.description;
+
+            card.append(header, description);
+            return card;
+        }
+
+        async function loadMissions() {
+            try {
+                const response = await fetch('data/misions.json');
+                if (!response.ok) {
+                    throw new Error(`Error HTTP ${response.status}`);
+                }
+
+                const data = await response.json();
+                if (!Array.isArray(data.missions)) {
+                    throw new Error('El archivo data/misions.json no contiene una lista de misiones válida.');
+                }
+
+                const visibleMissions = data.missions.filter(mission => mission.visible === true);
+                container.replaceChildren(...visibleMissions.map(createMissionCard));
+                message.textContent = visibleMissions.length
+                    ? ''
+                    : data.missions.length
+                        ? 'No hay misiones visibles.'
+                        : 'No hay misiones registradas.';
+            } catch (error) {
+                message.textContent = `No se pudieron cargar las misiones: ${error.message}`;
+            }
+        }
+
+        loadMissions();
+    </script>
+</body>
+
+</html>

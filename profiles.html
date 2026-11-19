@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Índice de personajes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Navegación principal">
+            <a href="#profiles" aria-current="page">Personajes</a>
+            <a href="misions.html">Misiones</a>
+            <a href="shop.html">Tienda</a>
+        </nav>
+    </header>
+
+    <h1>Índice de personajes</h1>
+    <!-- El estado de carga y las tarjetas se actualizan desde JavaScript. -->
+    <p id="message" role="status" aria-live="polite">Cargando personajes...</p>
+    <main class="index" id="profiles"></main>
+
+    <!-- Lee profiles.json y genera una tarjeta por cada personaje visible. -->
+    <script>
+        const container = document.getElementById('profiles');
+        const message = document.getElementById('message');
+
+        function createTextElement(className, text) {
+            const element = document.createElement('div');
+            element.className = className;
+            element.textContent = text;
+            return element;
+        }
+
+        function createCard(profile) {
+            const card = document.createElement('article');
+            card.className = 'card';
+
+            const header = document.createElement('header');
+            header.className = 'card-header';
+            header.append(
+                createTextElement('name', profile.name),
+                createTextElement('role', profile.role)
+            );
+
+            const body = document.createElement('div');
+            body.className = 'card-body';
+
+            const imageContainer = document.createElement('div');
+            imageContainer.className = 'image';
+            const image = document.createElement('img');
+            image.src = profile.image;
+            image.alt = profile.name;
+            imageContainer.append(image);
+            body.append(imageContainer, createTextElement('description', profile.description));
+
+            const footer = document.createElement('footer');
+            footer.className = 'card-footer';
+            footer.append(
+                createTextElement('relation', `Relación: ${profile.relation}`),
+                createTextElement('location', `Localización: ${profile.location}`)
+            );
+
+            card.append(header, body, footer);
+            return card;
+        }
+
+        async function loadProfiles() {
+            try {
+                const response = await fetch('data/profiles.json');
+                if (!response.ok) {
+                    throw new Error(`Error HTTP ${response.status}`);
+                }
+
+                const data = await response.json();
+                if (!Array.isArray(data.profiles)) {
+                    throw new Error('El archivo data/profiles.json no contiene una lista de perfiles válida.');
+                }
+
+                const visibleProfiles = data.profiles.filter(profile => profile.visible === true);
+                container.replaceChildren(...visibleProfiles.map(createCard));
+                message.textContent = visibleProfiles.length
+                    ? ''
+                    : data.profiles.length
+                        ? 'No hay personajes visibles.'
+                        : 'No hay personajes registrados.';
+            } catch (error) {
+                message.textContent = `No se pudieron cargar los personajes: ${error.message}`;
+            }
+        }
+
+        loadProfiles();
+    </script>
+</body>
+
+</html>

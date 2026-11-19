@@ -1,0 +1,663 @@
+{
+    "products": [
+        {
+            "Equipo y consumibles": [
+                {
+                    "name": "Mochila",
+                    "price": 2,
+                    "currency": "gp",
+                    "description": "Permite transportar equipo y suministros.",
+                    "units": 10
+                },
+                {
+                    "name": "Saco de dormir",
+                    "price": 1,
+                    "currency": "gp",
+                    "description": "Equipo básico para descansar durante los viajes.",
+                    "units": 8
+                },
+                {
+                    "name": "Manta",
+                    "price": 5,
+                    "currency": "sp",
+                    "description": "Protección sencilla contra el frío.",
+                    "units": 10
+                },
+                {
+                    "name": "Campana",
+                    "price": 1,
+                    "currency": "gp",
+                    "description": "Produce una señal sonora audible.",
+                    "units": 5
+                },
+                {
+                    "name": "Cubo",
+                    "price": 5,
+                    "currency": "cp",
+                    "description": "Recipiente útil para transportar líquidos.",
+                    "units": 6
+                },
+                {
+                    "name": "Cesta",
+                    "price": 4,
+                    "currency": "sp",
+                    "description": "Contenedor ligero para mercancías.",
+                    "units": 5
+                },
+                {
+                    "name": "Barril",
+                    "price": 2,
+                    "currency": "gp",
+                    "description": "Almacena grandes cantidades de bienes o líquidos.",
+                    "units": 3
+                },
+                {
+                    "name": "Botella de cristal",
+                    "price": 2,
+                    "currency": "gp",
+                    "description": "Recipiente para líquidos o preparados.",
+                    "units": 10
+                },
+                {
+                    "name": "Frasco",
+                    "price": 1,
+                    "currency": "gp",
+                    "description": "Pequeño recipiente de cristal.",
+                    "units": 20
+                },
+                {
+                    "name": "Odre",
+                    "price": 2,
+                    "currency": "sp",
+                    "description": "Contenedor portátil para agua.",
+                    "units": 15
+                },
+                {
+                    "name": "Antorcha",
+                    "price": 1,
+                    "currency": "cp",
+                    "description": "Iluminación portátil para exploración.",
+                    "units": 50
+                },
+                {
+                    "name": "Lámpara",
+                    "price": 5,
+                    "currency": "sp",
+                    "description": "Fuente de luz alimentada por aceite.",
+                    "units": 10
+                },
+                {
+                    "name": "Linterna de capucha",
+                    "price": 5,
+                    "currency": "gp",
+                    "description": "Linterna cuyo haz puede cubrirse.",
+                    "units": 4
+                },
+                {
+                    "name": "Linterna de ojo de buey",
+                    "price": 10,
+                    "currency": "gp",
+                    "description": "Linterna que proyecta la luz hacia delante.",
+                    "units": 2
+                },
+                {
+                    "name": "Aceite",
+                    "price": 1,
+                    "currency": "sp",
+                    "description": "Combustible para lámparas y linternas.",
+                    "units": 25
+                },
+                {
+                    "name": "Caja de yesca",
+                    "price": 5,
+                    "currency": "sp",
+                    "description": "Herramientas para encender fuego.",
+                    "units": 15
+                },
+                {
+                    "name": "Vela",
+                    "price": 1,
+                    "currency": "cp",
+                    "description": "Pequeña fuente de iluminación.",
+                    "units": 50
+                },
+                {
+                    "name": "Gancho de agarre",
+                    "price": 2,
+                    "currency": "gp",
+                    "description": "Gancho usado junto con una cuerda.",
+                    "units": 4
+                },
+                {
+                    "name": "Cuerda",
+                    "price": 1,
+                    "currency": "gp",
+                    "description": "Cuerda resistente para escalar y asegurar carga.",
+                    "units": 15
+                },
+                {
+                    "name": "Cadena",
+                    "price": 5,
+                    "currency": "gp",
+                    "description": "Cadena metálica robusta.",
+                    "units": 3
+                },
+                {
+                    "name": "Escalera",
+                    "price": 1,
+                    "currency": "sp",
+                    "description": "Herramienta de acceso vertical.",
+                    "units": 2
+                },
+                {
+                    "name": "Pértiga",
+                    "price": 5,
+                    "currency": "cp",
+                    "description": "Barra larga útil para exploración.",
+                    "units": 4
+                },
+                {
+                    "name": "Palanca",
+                    "price": 2,
+                    "currency": "gp",
+                    "description": "Herramienta para mover o forzar objetos.",
+                    "units": 5
+                },
+                {
+                    "name": "Pala",
+                    "price": 2,
+                    "currency": "gp",
+                    "description": "Herramienta para cavar.",
+                    "units": 4
+                },
+                {
+                    "name": "Martillo portátil",
+                    "price": 1,
+                    "currency": "gp",
+                    "description": "Herramienta común de construcción.",
+                    "units": 6
+                },
+                {
+                    "name": "Pitones de hierro",
+                    "price": 1,
+                    "currency": "gp",
+                    "description": "Anclajes metálicos para escalada.",
+                    "units": 20
+                },
+                {
+                    "name": "Candado",
+                    "price": 10,
+                    "currency": "gp",
+                    "description": "Cerradura para asegurar objetos.",
+                    "units": 4
+                },
+                {
+                    "name": "Esposas",
+                    "price": 2,
+                    "currency": "gp",
+                    "description": "Restricciones metálicas para prisioneros.",
+                    "units": 2
+                },
+                {
+                    "name": "Raciones",
+                    "price": 5,
+                    "currency": "sp",
+                    "description": "Comida conservada para viajes.",
+                    "units": 40
+                },
+                {
+                    "name": "Tienda de campaña",
+                    "price": 2,
+                    "currency": "gp",
+                    "description": "Refugio portátil para aventureros.",
+                    "units": 4
+                },
+                {
+                    "name": "Saco",
+                    "price": 1,
+                    "currency": "cp",
+                    "description": "Bolsa simple para transportar objetos.",
+                    "units": 20
+                },
+                {
+                    "name": "Bolsa",
+                    "price": 5,
+                    "currency": "sp",
+                    "description": "Pequeño contenedor para monedas y objetos.",
+                    "units": 15
+                },
+                {
+                    "name": "Mapa",
+                    "price": 1,
+                    "currency": "gp",
+                    "description": "Representación de una región o territorio.",
+                    "units": 5
+                },
+                {
+                    "name": "Libro",
+                    "price": 25,
+                    "currency": "gp",
+                    "description": "Volumen encuadernado para conocimiento o registros.",
+                    "units": 3
+                },
+                {
+                    "name": "Papel",
+                    "price": 2,
+                    "currency": "sp",
+                    "description": "Material para escritura.",
+                    "units": 50
+                },
+                {
+                    "name": "Pergamino",
+                    "price": 1,
+                    "currency": "sp",
+                    "description": "Soporte resistente para anotaciones.",
+                    "units": 50
+                },
+                {
+                    "name": "Tinta",
+                    "price": 10,
+                    "currency": "gp",
+                    "description": "Tinta para escritura y documentación.",
+                    "units": 5
+                },
+                {
+                    "name": "Pluma de tinta",
+                    "price": 2,
+                    "currency": "cp",
+                    "description": "Instrumento para escribir.",
+                    "units": 10
+                },
+                {
+                    "name": "Poción de curación",
+                    "price": 50,
+                    "currency": "gp",
+                    "description": "Poción mágica asociada a la recuperación de heridas.",
+                    "units": 5
+                },
+                {
+                    "name": "Antitoxina",
+                    "price": 50,
+                    "currency": "gp",
+                    "description": "Preparado que ayuda contra los efectos del veneno.",
+                    "units": 2
+                },
+                {
+                    "name": "Ácido",
+                    "price": 25,
+                    "currency": "gp",
+                    "description": "Sustancia corrosiva almacenada en un vial.",
+                    "units": 4
+                },
+                {
+                    "name": "Fuego de alquimista",
+                    "price": 50,
+                    "currency": "gp",
+                    "description": "Mezcla alquímica inflamable.",
+                    "units": 2
+                },
+                {
+                    "name": "Agua bendita",
+                    "price": 25,
+                    "currency": "gp",
+                    "description": "Agua consagrada de uso religioso.",
+                    "units": 3
+                },
+                {
+                    "name": "Veneno básico",
+                    "price": 100,
+                    "currency": "gp",
+                    "description": "Tóxico utilizado para impregnar armas.",
+                    "units": 1
+                }
+            ]
+        },
+        {
+            "Armas y armaduras": [
+                {
+                    "name": "Garrote",
+                    "price": 1,
+                    "currency": "sp",
+                    "description": "Arma contundente simple de madera.",
+                    "units": 10
+                },
+                {
+                    "name": "Daga",
+                    "price": 2,
+                    "currency": "gp",
+                    "description": "Arma ligera apta para combate y lanzamiento.",
+                    "units": 10
+                },
+                {
+                    "name": "Gran garrote",
+                    "price": 2,
+                    "currency": "sp",
+                    "description": "Garrote pesado manejado a dos manos.",
+                    "units": 5
+                },
+                {
+                    "name": "Hacha de mano",
+                    "price": 5,
+                    "currency": "gp",
+                    "description": "Pequeña hacha de combate versátil.",
+                    "units": 6
+                },
+                {
+                    "name": "Jabalina",
+                    "price": 5,
+                    "currency": "sp",
+                    "description": "Arma arrojadiza de asta corta.",
+                    "units": 20
+                },
+                {
+                    "name": "Martillo ligero",
+                    "price": 2,
+                    "currency": "gp",
+                    "description": "Martillo ligero utilizable en cuerpo a cuerpo o a distancia.",
+                    "units": 8
+                },
+                {
+                    "name": "Maza",
+                    "price": 5,
+                    "currency": "gp",
+                    "description": "Arma contundente reforzada con metal.",
+                    "units": 6
+                },
+                {
+                    "name": "Bastón",
+                    "price": 2,
+                    "currency": "sp",
+                    "description": "Bastón largo usado como arma defensiva.",
+                    "units": 10
+                },
+                {
+                    "name": "Hoz",
+                    "price": 1,
+                    "currency": "gp",
+                    "description": "Herramienta agrícola reutilizada como arma.",
+                    "units": 8
+                },
+                {
+                    "name": "Lanza",
+                    "price": 1,
+                    "currency": "gp",
+                    "description": "Lanza sencilla para combate y lanzamiento.",
+                    "units": 12
+                },
+                {
+                    "name": "Ballesta ligera",
+                    "price": 25,
+                    "currency": "gp",
+                    "description": "Ballesta ligera de recarga manual.",
+                    "units": 4
+                },
+                {
+                    "name": "Dardo",
+                    "price": 5,
+                    "currency": "cp",
+                    "description": "Pequeño proyectil arrojadizo.",
+                    "units": 50
+                },
+                {
+                    "name": "Arco corto",
+                    "price": 25,
+                    "currency": "gp",
+                    "description": "Arco compacto de uso común.",
+                    "units": 5
+                },
+                {
+                    "name": "Honda",
+                    "price": 1,
+                    "currency": "sp",
+                    "description": "Honda para lanzar piedras o munición.",
+                    "units": 10
+                },
+                {
+                    "name": "Hacha de batalla",
+                    "price": 10,
+                    "currency": "gp",
+                    "description": "Hacha marcial de filo amplio.",
+                    "units": 4
+                },
+                {
+                    "name": "Mangual",
+                    "price": 10,
+                    "currency": "gp",
+                    "description": "Arma de cadena con cabeza metálica.",
+                    "units": 3
+                },
+                {
+                    "name": "Guja",
+                    "price": 20,
+                    "currency": "gp",
+                    "description": "Arma de asta con hoja larga.",
+                    "units": 2
+                },
+                {
+                    "name": "Gran hacha",
+                    "price": 30,
+                    "currency": "gp",
+                    "description": "Gran hacha utilizada a dos manos.",
+                    "units": 2
+                },
+                {
+                    "name": "Mandoble",
+                    "price": 50,
+                    "currency": "gp",
+                    "description": "Espada pesada de gran tamaño.",
+                    "units": 2
+                },
+                {
+                    "name": "Alabarda",
+                    "price": 20,
+                    "currency": "gp",
+                    "description": "Combinación de hacha y lanza larga.",
+                    "units": 2
+                },
+                {
+                    "name": "Lanza de caballería",
+                    "price": 10,
+                    "currency": "gp",
+                    "description": "Arma de caballería para cargas montadas.",
+                    "units": 2
+                },
+                {
+                    "name": "Espada larga",
+                    "price": 15,
+                    "currency": "gp",
+                    "description": "Espada equilibrada de uso marcial.",
+                    "units": 5
+                },
+                {
+                    "name": "Gran maza",
+                    "price": 10,
+                    "currency": "gp",
+                    "description": "Gran martillo de guerra.",
+                    "units": 3
+                },
+                {
+                    "name": "Lucero del alba",
+                    "price": 15,
+                    "currency": "gp",
+                    "description": "Maza rematada con púas.",
+                    "units": 3
+                },
+                {
+                    "name": "Pica",
+                    "price": 5,
+                    "currency": "gp",
+                    "description": "Lanza muy larga para mantener distancia.",
+                    "units": 4
+                },
+                {
+                    "name": "Estoque",
+                    "price": 25,
+                    "currency": "gp",
+                    "description": "Espada ligera orientada a la precisión.",
+                    "units": 4
+                },
+                {
+                    "name": "Cimitarra",
+                    "price": 25,
+                    "currency": "gp",
+                    "description": "Sable curvo rápido y ligero.",
+                    "units": 3
+                },
+                {
+                    "name": "Espada corta",
+                    "price": 10,
+                    "currency": "gp",
+                    "description": "Espada corta fácil de manejar.",
+                    "units": 8
+                },
+                {
+                    "name": "Tridente",
+                    "price": 5,
+                    "currency": "gp",
+                    "description": "Arma de tres puntas inspirada en la pesca.",
+                    "units": 3
+                },
+                {
+                    "name": "Pico de guerra",
+                    "price": 5,
+                    "currency": "gp",
+                    "description": "Pico diseñado para perforar defensas.",
+                    "units": 3
+                },
+                {
+                    "name": "Martillo de guerra",
+                    "price": 15,
+                    "currency": "gp",
+                    "description": "Martillo de guerra equilibrado.",
+                    "units": 4
+                },
+                {
+                    "name": "Látigo",
+                    "price": 2,
+                    "currency": "gp",
+                    "description": "Látigo flexible con alcance aumentado.",
+                    "units": 5
+                },
+                {
+                    "name": "Cerbatana",
+                    "price": 10,
+                    "currency": "gp",
+                    "description": "Tubo para disparar pequeños dardos.",
+                    "units": 2
+                },
+                {
+                    "name": "Ballesta de mano",
+                    "price": 75,
+                    "currency": "gp",
+                    "description": "Ballesta compacta operable con una mano.",
+                    "units": 2
+                },
+                {
+                    "name": "Ballesta pesada",
+                    "price": 50,
+                    "currency": "gp",
+                    "description": "Ballesta pesada de gran potencia.",
+                    "units": 2
+                },
+                {
+                    "name": "Arco largo",
+                    "price": 50,
+                    "currency": "gp",
+                    "description": "Arco largo de gran alcance.",
+                    "units": 3
+                },
+                {
+                    "name": "Armadura acolchada",
+                    "price": 5,
+                    "currency": "gp",
+                    "description": "Armadura ligera de tela acolchada.",
+                    "units": 4
+                },
+                {
+                    "name": "Armadura de cuero",
+                    "price": 10,
+                    "currency": "gp",
+                    "description": "Armadura ligera de cuero endurecido.",
+                    "units": 8
+                },
+                {
+                    "name": "Armadura de cuero tachonado",
+                    "price": 45,
+                    "currency": "gp",
+                    "description": "Cuero reforzado con remaches metálicos.",
+                    "units": 3
+                },
+                {
+                    "name": "Armadura de pieles",
+                    "price": 10,
+                    "currency": "gp",
+                    "description": "Armadura fabricada con pieles gruesas.",
+                    "units": 4
+                },
+                {
+                    "name": "Camisa de malla",
+                    "price": 50,
+                    "currency": "gp",
+                    "description": "Protección media de anillos metálicos.",
+                    "units": 4
+                },
+                {
+                    "name": "Cota de escamas",
+                    "price": 50,
+                    "currency": "gp",
+                    "description": "Armadura cubierta por escamas metálicas.",
+                    "units": 3
+                },
+                {
+                    "name": "Coraza",
+                    "price": 400,
+                    "currency": "gp",
+                    "description": "Coraza metálica que protege el torso.",
+                    "units": 1
+                },
+                {
+                    "name": "Media armadura de placas",
+                    "price": 750,
+                    "currency": "gp",
+                    "description": "Armadura media reforzada con placas.",
+                    "units": 1
+                },
+                {
+                    "name": "Armadura de anillas",
+                    "price": 30,
+                    "currency": "gp",
+                    "description": "Armadura pesada con anillos metálicos.",
+                    "units": 3
+                },
+                {
+                    "name": "Cota de malla",
+                    "price": 75,
+                    "currency": "gp",
+                    "description": "Cota de malla pesada tradicional.",
+                    "units": 3
+                },
+                {
+                    "name": "Armadura de láminas",
+                    "price": 200,
+                    "currency": "gp",
+                    "description": "Armadura pesada formada por placas estrechas.",
+                    "units": 2
+                },
+                {
+                    "name": "Armadura de placas",
+                    "price": 1500,
+                    "currency": "gp",
+                    "description": "Armadura pesada de placas completas.",
+                    "units": 1
+                },
+                {
+                    "name": "Escudo",
+                    "price": 10,
+                    "currency": "gp",
+                    "description": "Escudo que mejora la protección personal.",
+                    "units": 10
+                }
+            ]
+        }
+    ]
+}

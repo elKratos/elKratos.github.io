@@ -1,0 +1,67 @@
+{
+    "profiles": [
+        {
+            "name": "Alice",
+            "visible": false,
+            "role": "Picara",
+            "image": "src/images/webp/Alice.webp",
+            "description": "Verdadera identidad de la asesiona que ataco a Noral. Hermanastra de Hal-Ber, trabaja con los mercenarios Ala roja y es experta en el robo y la infiltración. Su padre es el lider de los mercenarios Ala roja.",
+            "relation": "No especificada",
+            "location": "Desconocida"
+        },
+        {
+            "name": "Asesina",
+            "visible": true,
+            "role": "Picara",
+            "image": "src/images/webp/Asesina.webp",
+            "description": "Figura encapuchada de aspecto demoníaco, armada con una daga y vestida para moverse sin ser reconocida.",
+            "relation": "No especificada",
+            "location": "Desconocida"
+        },
+        {
+            "name": "Blepp",
+            "visible": true,
+            "role": "Pícaro goblin",
+            "image": "src/images/webp/Blepp.webp",
+            "description": "Pequeño ser reptiliano de escamas rojizas, con colmillos, un cuchillo y equipo de viaje.",
+            "relation": "No especificada",
+            "location": "No especificada"
+        },
+        {
+            "name": "Jhank",
+            "visible": false,
+            "role": "Guerrero",
+            "image": "src/images/webp/Jhank.webp",
+            "description": "Combatiente corpulento con armadura de cuero y malla, capa roja y una gran espada.",
+            "relation": "No especificada",
+            "location": "No especificada"
+        },
+        {
+            "name": "Morvath",
+            "visible": false,
+            "role": "Hechicero dragón",
+            "image": "src/images/webp/Morvath.webp",
+            "description": "Ser dracónico de escamas doradas, vestido con ropas oscuras y portando un bastón con una gema.",
+            "relation": "No especificada",
+            "location": "No especificada"
+        },
+        {
+            "name": "Tarak",
+            "visible": true,
+            "role": "Alquimista y herbolario",
+            "image": "src/images/webp/Tarak.webp",
+            "description": "Hombre de barba canosa con delantal, frascos de pociones y un cuenco de preparación.",
+            "relation": "No especificada",
+            "location": "No especificada"
+        },
+        {
+            "name": "Runara",
+            "visible": true,
+            "role": "Alquimista y herbolario",
+            "image": "src/images/webp/Runara.webp",
+            "description": "Mujer de barba canosa con delantal, frascos de pociones y un cuenco de preparación.",
+            "relation": "No especificada",
+            "location": "No especificada"
+        }
+    ]
+}

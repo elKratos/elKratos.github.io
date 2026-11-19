@@ -1,0 +1,22 @@
+{
+    "missions": [
+        {
+            "name": "La pista de la asesina",
+            "visible": true,
+            "completed": false,
+            "description": "Investiga el ataque contra Noral y descubre quién es la figura encapuchada."
+        },
+        {
+            "name": "Los mercenarios del Ala Roja",
+            "visible": true,
+            "completed": false,
+            "description": "Sigue el rastro de los mercenarios y averigua qué relación tienen con la asesina."
+        },
+        {
+            "name": "El encargo de Tarak",
+            "visible": true,
+            "completed": true,
+            "description": "Reúne los ingredientes que necesita Tarak para preparar una poción."
+        }
+    ]
+}

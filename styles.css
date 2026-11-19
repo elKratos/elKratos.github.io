@@ -18,6 +18,52 @@ body {
         #17191d;
 }
 
+/* Navegación principal */
+.site-header {
+    width: min(1200px, calc(100% - 40px));
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 7px;
+    border: 1px solid #ffffff1c;
+    border-radius: 999px;
+    background: #202126cc;
+    box-shadow: 0 8px 24px #0003;
+}
+
+.site-nav a {
+    padding: 10px 18px;
+    border-radius: 999px;
+    color: #d4d0c8;
+    font-size: 0.94rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 180ms ease, color 180ms ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+    background: #d9b66d16;
+    color: #f6d88c;
+}
+
+.site-nav a:focus-visible {
+    outline: 2px solid #d9b66d;
+    outline-offset: 2px;
+}
+
+.site-nav a[aria-current="page"] {
+    background: #d9b66d;
+    color: #17191d;
+}
+
 /* Título y mensajes de estado */
 h1 {
     margin: 0;
@@ -141,8 +187,310 @@ h1 {
     font-size: 0.84rem;
 }
 
+/* Tarjetas de misiones y sus estados */
+.mission-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: flex-start;
+    gap: 12px;
+    min-height: 0;
+}
+
+.mission-header .name {
+    margin: 0;
+}
+
+.mission-status {
+    flex: 0 0 auto;
+    padding: 4px 9px;
+    border: 1px solid #d9b66d45;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+}
+
+.mission-status.is-completed {
+    background: #d9b66d24;
+    color: #f6d88c;
+}
+
+.mission-status.is-pending {
+    background: #ffffff0a;
+    color: #d4d0c8;
+}
+
+.mission-card .description {
+    margin: 14px 0 0;
+}
+
+.mission-list {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 900px;
+}
+
+/* Vendedor junto al inventario */
+.shop-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.shop-layout {
+    display: grid;
+    grid-template-columns: minmax(230px, 280px) minmax(0, 1fr);
+    align-items: stretch;
+    gap: 24px;
+    width: min(1280px, calc(100% - 40px));
+    flex: 1 1 auto;
+    min-height: 0;
+    margin: 18px auto 20px;
+}
+
+.shopkeeper-panel {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.shopkeeper-portrait {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.shopkeeper-portrait img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: min(58vh, 520px);
+    object-fit: contain;
+}
+
+.shopkeeper-name {
+    margin: 0;
+    color: #f5e8ce;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+}
+
+.speech-bubble {
+    position: relative;
+    margin: 0;
+    padding: 14px 16px;
+    border: 1px solid #d9b66d70;
+    border-radius: 18px 18px 4px 18px;
+    background: linear-gradient(155deg, #303138, #25262c);
+    color: #f3ead8;
+    font-size: 0.96rem;
+    line-height: 1.55;
+    box-shadow: 0 8px 20px #0003;
+}
+
+.shop-inventory {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.shop-inventory #message {
+    flex: 0 0 auto;
+    padding: 8px 0 14px;
+    text-align: left;
+}
+
+/* Inventario en columnas con precio destacado por moneda */
+.product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+    padding: 2px 6px 12px 2px;
+}
+
+.product-category {
+    flex: 0 0 auto;
+    min-width: 0;
+}
+
+.category-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    padding: 12px 14px;
+    border: 1px solid #d9b66d45;
+    border-radius: 10px;
+    background: #202126;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+.category-title::-webkit-details-marker {
+    display: none;
+}
+
+.category-title::marker {
+    content: "";
+}
+
+.category-title:focus-visible {
+    outline: 2px solid #d9b66d;
+    outline-offset: 3px;
+}
+
+.category-title:hover {
+    border-color: #d9b66d99;
+}
+
+.category-name {
+    margin: 0;
+    color: #f6d88c;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.15rem;
+}
+
+.category-count {
+    margin-left: auto;
+    color: #b7b0a5;
+    font-size: 0.82rem;
+}
+
+.category-title::after {
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #d9b66d;
+    border-bottom: 2px solid #d9b66d;
+    content: "";
+    transform: rotate(45deg);
+    transition: transform 160ms ease;
+}
+
+.product-category[open] > .category-title::after {
+    transform: rotate(225deg);
+}
+
+.category-products {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    padding-top: 14px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-width: 0;
+    min-height: 172px;
+    padding: 16px;
+    border: 1px solid #ffffff1c;
+    border-radius: 14px;
+    background: linear-gradient(155deg, #292b31, #202126 70%);
+    box-shadow: 0 10px 24px #0003;
+    transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+    border-color: #d9b66d99;
+    box-shadow: 0 14px 28px #0005;
+}
+
+.product-details {
+    min-width: 0;
+}
+
+.product-name {
+    margin: 0;
+    color: #f5e8ce;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.1rem;
+}
+
+.product-description {
+    margin: 8px 0 0;
+    color: #d4d0c8;
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.product-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 10px;
+    border-top: 1px solid #ffffff1c;
+}
+
+.product-stock {
+    margin: 0;
+    color: #b7b0a5;
+    font-size: 0.76rem;
+}
+
+.product-price {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.96rem;
+    font-weight: 700;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.coin-gold {
+    color: #f6d88c;
+}
+
+.coin-silver {
+    color: #d6dce5;
+}
+
+.coin-bronze {
+    color: #d99a68;
+}
+
+.coin-copper {
+    color: #d18a5b;
+}
+
+@media (max-width: 900px) {
+    .category-products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 520px) {
+    .site-header {
+        width: calc(100% - 28px);
+        padding-top: 14px;
+    }
+
+    .site-nav {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .site-nav a {
+        padding: 10px 12px;
+        font-size: 0.88rem;
+    }
+
     h1 {
         padding-top: 32px;
     }
@@ -159,6 +507,60 @@ h1 {
 
     .image img {
         height: 280px;
+    }
+
+    .shop-layout {
+        grid-template-columns: 1fr;
+        width: calc(100% - 28px);
+        grid-template-rows: auto minmax(0, 1fr);
+        gap: 8px;
+        margin: 8px auto 12px;
+    }
+
+    .shopkeeper-panel {
+        align-items: center;
+        gap: 4px;
+    }
+
+    .speech-bubble {
+        padding: 8px 12px;
+        font-size: 0.88rem;
+        text-align: center;
+    }
+
+    .shopkeeper-portrait {
+        gap: 2px;
+    }
+
+    .shopkeeper-portrait img {
+        height: clamp(100px, 17vh, 150px);
+    }
+
+    .shop-inventory #message {
+        padding: 4px 0 8px;
+    }
+
+    .product-list {
+        gap: 10px;
+        padding-right: 4px;
+    }
+
+    .category-products {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .product-card {
+        min-height: 140px;
+        padding: 14px;
+    }
+
+    .product-name {
+        font-size: 1.05rem;
+    }
+
+    .product-price {
+        font-size: 0.92rem;
     }
 }
 
