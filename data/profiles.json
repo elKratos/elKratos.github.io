@@ -5,7 +5,7 @@
             "visible": false,
             "role": "Picara",
             "image": "src/images/webp/Alice.webp",
-            "description": "Verdadera identidad de la asesiona que ataco a Noral. Hermanastra de Hal-Ber, trabaja con los mercenarios Ala roja y es experta en el robo y la infiltración. Su padre es el lider de los mercenarios Ala roja.",
+            "description": "Verdadera identidad de la asesiona que ataco a Norak. Hermanastra de Hal-Ber, trabaja con los mercenarios Ala roja y es experta en el robo y la infiltración. Su padre es el lider de los mercenarios Ala roja.",
             "relation": "No especificada",
             "location": "Desconocida"
         },
@@ -14,35 +14,26 @@
             "visible": true,
             "role": "Picara",
             "image": "src/images/webp/Asesina.webp",
-            "description": "Figura encapuchada de aspecto demoníaco, armada con una daga y vestida para moverse sin ser reconocida.",
-            "relation": "No especificada",
+            "description": "Mercenaria que intento asesinar a Norak en el Ratiro del Dragón. Su identidad es desconocida, pero se sabe que es experta en el robo y la infiltración.",
+            "relation": "Ostil",
             "location": "Desconocida"
-        },
-        {
-            "name": "Blepp",
-            "visible": true,
-            "role": "Pícaro goblin",
-            "image": "src/images/webp/Blepp.webp",
-            "description": "Pequeño ser reptiliano de escamas rojizas, con colmillos, un cuchillo y equipo de viaje.",
-            "relation": "No especificada",
-            "location": "No especificada"
         },
         {
             "name": "Jhank",
             "visible": false,
-            "role": "Guerrero",
+            "role": "Lider de los mercenarios Ala roja",
             "image": "src/images/webp/Jhank.webp",
-            "description": "Combatiente corpulento con armadura de cuero y malla, capa roja y una gran espada.",
-            "relation": "No especificada",
+            "description": "Padre de Hal-Ber y Alicia y actual lider de los mercenarios Ala roja.",
+            "relation": "Ostil",
             "location": "No especificada"
         },
         {
             "name": "Morvath",
             "visible": false,
-            "role": "Hechicero dragón",
+            "role": "Nigromante",
             "image": "src/images/webp/Morvath.webp",
-            "description": "Ser dracónico de escamas doradas, vestido con ropas oscuras y portando un bastón con una gema.",
-            "relation": "No especificada",
+            "description": "Misterioso nigromante que busca la resurección de Sharruth, la dragona roja que aterrorizo la Costa de la Espada siglos atras y que cree que es su diosa y salvadora.",
+            "relation": "Ostil",
             "location": "No especificada"
         },
         {
@@ -50,18 +41,90 @@
             "visible": true,
             "role": "Alquimista y herbolario",
             "image": "src/images/webp/Tarak.webp",
-            "description": "Hombre de barba canosa con delantal, frascos de pociones y un cuenco de preparación.",
-            "relation": "No especificada",
-            "location": "No especificada"
+            "description": "Es un humano de mediana edad que se encarga de cuidar de las plantas del Retiro del Dragón. Tambien, con los materiales adecuados y un precio puede crear pociones y venenos para los aventureros que lo visiten.",
+            "relation": "Amistoso",
+            "location": "Retiro del Dragón"
+        },
+        {
+            "name": "Varnoth",
+            "visible": true,
+            "role": "General retirada",
+            "image": "src/images/webp/Varnoth.webp",
+            "description": "Es una humana de edad avanzada, que aparenta haber participado en muchas batallas y guerras. Actualmente vive en el Retiro del Dragón, y se sabe de ella que es una general retirada.",
+            "relation": "Amistoso",
+            "location": "Retiro del Dragón"
         },
         {
             "name": "Runara",
             "visible": true,
-            "role": "Alquimista y herbolario",
+            "role": "Lider del claustro",
             "image": "src/images/webp/Runara.webp",
-            "description": "Mujer de barba canosa con delantal, frascos de pociones y un cuenco de preparación.",
-            "relation": "No especificada",
-            "location": "No especificada"
+            "description": "Principal lider del claustro del Retiro del Dragón. Es una humana anciana muy sabia y con gran conocimiento de historia y magia. Cuida de los habitantes del Retiro del Dragón y de los aventureros que lo visitan.",
+            "relation": "Amistoso",
+            "location": "Retiro del Dragón"
+        }, 
+        {
+            "name": "Agga",
+            "visible": true,
+            "role": "Kobold habitante",
+            "image": "src/images/webp/Blepp.webp",
+            "description": "Mantiene al resto de kobolds organizados y bajo control. Se encarga de cocinar para todos los habitantes del Retiro del Dragón.",
+            "relation": "Neutral/Amistoso",
+            "location": "Retiro del Dragón"
+        },
+        {
+            "name": "Blepp",
+            "visible": true,
+            "role": "Kobold habitante",
+            "image": "src/images/webp/Blepp.webp",
+            "description": "Blepp tiene un sentido agudo del peligro y está convencido de que su suerte es sobrenatural. Su posesión más preciada es su daga, la cual asegura es mágica.",
+            "relation": "Neutral",
+            "location": "Retiro del Dragón"
+        },
+        {
+            "name": "Laylee",
+            "visible": true,
+            "role": "Kobold bibliotecaria",
+            "image": "src/images/webp/Blepp.webp",
+            "description": "Es la aprendiz de Myla y una ratón de biblioteca. Es muy curiosa y proactiva, siempre buscando aprender cosas nuevas y ayudar a los demás.",
+            "relation": "Amistoso",
+            "location": "Retiro del Dragón"
+        },
+        {
+            "name": "Myla",
+            "visible": true,
+            "role": "Kobold comerciante",
+            "image": "src/images/webp/Myla.webp",
+            "description": "Myla es la principal comerciante del Retiro del Dragón. Tiene caracter y es muy estricta con los precios de sus productos,pero es justa y ofrece buen servicio. Principalmente se encarga de vender y comprar objetos, aunque tembien puede hacer otras cosas como herreria.",
+            "relation": "Amistoso",
+            "location": "Retiro del Dragón"
+        },
+        {
+            "name": "Rix",
+            "visible": true,
+            "role": "Kobold habitante",
+            "image": "src/images/webp/Blepp.webp",
+            "description": "Cuida del templo en calidad de ayudante de Runara. Es un poco timida, pero muy amable y servicial. Siempre esta dispuesta a ayudar a los aventureros que visitan el Retiro del Dragón.",
+            "relation": "Amistoso",
+            "location": "Retiro del Dragón"
+        },
+        {
+            "name": "Ruggoso",
+            "visible": true,
+            "role": "Miconido",
+            "image": "src/images/webp/Miconido.webp",
+            "description": "Es un habitante de las Cuevas de Pleamar. Fue quien ayudo a los aventureros a hablar con el jefe de la tribu de los miconidos.",
+            "relation": "Amistoso",
+            "location": "Cuevas de Pleamar"
+        },
+        {
+            "name": "Sinesa",
+            "visible": true,
+            "role": "Lider de los miconidos",
+            "image": "src/images/webp/Miconido.webp",
+            "description": "Es el lider de la tribu de los miconidos. Es un ser muy sabio y respetado por su pueblo. Se encarga de guiar a su tribu y protegerla de cualquier amenaza.",
+            "relation": "Amistoso",
+            "location": "Cuevas de Pleamar"
         }
     ]
 }

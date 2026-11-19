@@ -20,17 +20,9 @@
     <h1>Tienda</h1>
 
     <main class="shop-layout" id="shop">
-        <!-- El vendedor da la bienvenida desde su propio panel. -->
-        <aside class="shopkeeper-panel" aria-label="Vendedor">
-            <p class="speech-bubble">Bienvenido, ¿en qué le puedo ayudar?</p>
-            <div class="shopkeeper-portrait">
-                <img src="src/images/shopkeeper.png" alt="Tarak, el vendedor">
-                <h2 class="shopkeeper-name">Tarak</h2>
-            </div>
-        </aside>
-
         <section class="shop-inventory" aria-label="Productos en venta">
             <p id="message" role="status" aria-live="polite">Cargando productos...</p>
+            <div class="category-nav" id="categories" role="group" aria-label="Categorías de productos"></div>
             <div class="product-list" id="products"></div>
         </section>
     </main>
@@ -38,6 +30,7 @@
     <!-- Lee data/products.json y genera una tarjeta por producto. -->
     <script>
         const container = document.getElementById('products');
+        const categoryNav = document.getElementById('categories');
         const message = document.getElementById('message');
         const currencyClasses = {
             oro: 'coin-gold',
@@ -86,28 +79,24 @@
             return card;
         }
 
-        function createCategory(name, products) {
-            const category = document.createElement('details');
-            category.className = 'product-category';
-
-            const summary = document.createElement('summary');
-            summary.className = 'category-title';
-
-            const heading = document.createElement('h2');
-            heading.className = 'category-name';
-            heading.textContent = name;
+        function createCategoryButton(name, productCount, index, selectCategory) {
+            const button = document.createElement('button');
+            button.className = 'category-button';
+            button.type = 'button';
+            button.setAttribute('aria-pressed', String(index === 0));
+            button.setAttribute('aria-controls', 'products');
+            button.addEventListener('click', () => selectCategory(index));
 
             const count = document.createElement('span');
             count.className = 'category-count';
-            count.textContent = `${products.length} productos`;
-            summary.append(heading, count);
+            count.textContent = `${productCount} productos`;
 
-            const grid = document.createElement('div');
-            grid.className = 'category-products';
-            grid.append(...products.map(createProductCard));
+            const nameLabel = document.createElement('span');
+            nameLabel.className = 'category-name';
+            nameLabel.textContent = name;
 
-            category.append(summary, grid);
-            return category;
+            button.append(nameLabel, count);
+            return button;
         }
 
         async function loadProducts() {
@@ -128,9 +117,26 @@
                         throw new Error('Cada categoría debe contener una lista de productos.');
                     }
 
-                    return createCategory(entries[0][0], entries[0][1]);
+                    return {
+                        name: entries[0][0],
+                        products: entries[0][1].map(createProductCard)
+                    };
                 });
-                container.replaceChildren(...categories);
+
+                const selectCategory = selectedIndex => {
+                    categoryNav.querySelectorAll('.category-button').forEach((button, index) => {
+                        button.setAttribute('aria-pressed', String(index === selectedIndex));
+                    });
+                    container.replaceChildren(...categories[selectedIndex].products);
+                    container.scrollTop = 0;
+                };
+
+                categoryNav.replaceChildren(...categories.map((category, index) =>
+                    createCategoryButton(category.name, category.products.length, index, selectCategory)
+                ));
+                if (categories.length) {
+                    selectCategory(0);
+                }
                 message.textContent = data.products.length ? '' : 'No hay productos disponibles.';
             } catch (error) {
                 message.textContent = `No se pudieron cargar los productos: ${error.message}`;

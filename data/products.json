@@ -313,7 +313,7 @@
             ]
         },
         {
-            "Armas y armaduras": [
+            "Armas": [
                 {
                     "name": "Garrote",
                     "price": 1,
@@ -565,7 +565,11 @@
                     "currency": "gp",
                     "description": "Arco largo de gran alcance.",
                     "units": 3
-                },
+                }
+            ]
+        },
+        {
+            "Armaduras": [
                 {
                     "name": "Armadura acolchada",
                     "price": 5,
